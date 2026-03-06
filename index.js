@@ -6,7 +6,7 @@ app.use(express.json());
 
 
 // connnect with database
-mongoose.connect('...........')
+mongoose.connect("..............")
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.error('Could not connect to MongoDB', err));
 
@@ -54,7 +54,7 @@ app.get("/users/id/:id", async (req, res) => {
 
 
 //POST (new user)
-app.post("/users", async (req, res) => {
+app.post("/user", async (req, res) => {
     try {
         const data = new Users(req.body);
         await data.save();                  //saving user to the database
